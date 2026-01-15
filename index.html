@@ -14,7 +14,7 @@
       background:#fff;
     }
 
-    /* Banner */
+    /* Banner（完全不動） */
     .banner{
       width:100%;
       height:220px;
@@ -39,7 +39,7 @@
     .banner-card h1{ margin:0 0 6px; font-size:34px; }
     .banner-card p{ margin:0; font-size:16px; }
 
-    /* 手機 */
+    /* 手機（完全不動） */
     @media (max-width: 768px){
       .banner{
         height:140px;
@@ -49,7 +49,7 @@
       .banner-card p{ font-size:14px; }
     }
 
-    /* 內容區：白底 */
+    /* 內容區：白底（保閱讀） */
     .section{
       padding:50px 20px;
       max-width:900px;
@@ -57,40 +57,48 @@
       background:#ffffff;
     }
 
-    /* 推薦區：淺灰 */
+    /* 推薦區：電競紫系（繽紛但不吵） */
     .section.gray{
-      background:#f3f0ff;
+      background: linear-gradient(135deg, #f4f1ff 0%, #efe7ff 45%, #e9fbff 100%);
       max-width:none;
       margin:0;
+      border-top: 1px solid rgba(124,58,237,0.18);
+      border-bottom: 1px solid rgba(59,130,246,0.16);
     }
     .section.gray .inner{
       max-width:900px;
       margin:auto;
     }
 
-    /* CTA：深色收尾 */
+    /* CTA：紫色電競感收尾（不動 Banner） */
     .cta{
       padding:70px 20px;
       text-align:center;
-      background:#1a1a1a;
+      background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 45%, #2563eb 100%);
       color:#fff;
     }
 
     .btn{
       display:inline-block;
-      padding:14px 34px;
-      background:#ffffff;
-      color:#000;
+      padding:14px 38px;
+      background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 55%, #22d3ee 100%);
+      color:#0b0b12;
       text-decoration:none;
       border-radius:999px;
-      font-weight:500;
+      font-weight:700;
+      box-shadow: 0 10px 24px rgba(76,29,149,0.35);
+    }
+
+    .btn:hover{
+      filter: brightness(1.06);
+      transform: translateY(-1px);
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Banner -->
+  <!-- Banner（完全不動） -->
   <div class="banner">
     <div class="banner-card">
       <h1>好玩遊戲</h1>
