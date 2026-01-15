@@ -6,12 +6,11 @@
   <title>好玩遊戲</title>
 
   <style>
-    /* ===== 快速調整區（你只要改這裡的數字） ===== */
     :root{
-      --content-width: 900px;   /* 內容寬度：900~1200 都行 */
-      --section-pad-y: 50px;     /* 內容區上下留白：50~90 */
-      --section-pad-x: 16px;     /* 內容區左右留白：16~28 */
-      --card-radius: 18px;       /* 圓角：14~24 */
+      --content-width: 900px;
+      --section-pad-y: 50px;
+      --section-pad-x: 16px;
+      --card-radius: 18px;
     }
 
     body{
@@ -19,7 +18,6 @@
       font-family: Arial, "Noto Sans TC", sans-serif;
       line-height:1.6;
       color:#eaeaf2;
-      /* 電競底：深色 + 微光感 */
       background:
         radial-gradient(900px 500px at 15% 10%, rgba(168,85,247,0.22), transparent 60%),
         radial-gradient(900px 500px at 85% 20%, rgba(34,211,238,0.18), transparent 60%),
@@ -27,9 +25,7 @@
         #0b0b12;
     }
 
-    /* ======================
-       Banner（⚠️ 完全不動）
-       ====================== */
+    /* Banner（不動） */
     .banner{
       width:100%;
       height:220px;
@@ -48,153 +44,79 @@
       margin:0 16px;
       max-width:900px;
       width:calc(100% - 32px);
-      box-sizing:border-box;
     }
 
     .banner-card h1{ margin:0 0 6px; font-size:34px; }
     .banner-card p{ margin:0; font-size:16px; }
 
-    /* 手機（⚠️ 完全不動 Banner 行為） */
     @media (max-width: 768px){
-      .banner{
-        height:140px;
-        background-position:center top;
-      }
+      .banner{ height:140px; background-position:center top; }
       .banner-card h1{ font-size:26px; }
       .banner-card p{ font-size:14px; }
     }
 
-    /* ===== 共用容器（內容區 / 推薦區） ===== */
     .wrap{
       max-width: var(--content-width);
       margin: 0 auto;
       padding: 0 var(--section-pad-x);
-      box-sizing: border-box;
     }
 
-    /* ===== 內容區：做成電競 UI 卡片感 ===== */
-    .section{
-      padding: var(--section-pad-y) 0;
-    }
+    .section{ padding: var(--section-pad-y) 0; }
 
     .card{
       border-radius: var(--card-radius);
       padding: 28px 26px;
-      color:#f0f0ff;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
       border: 1px solid rgba(168,85,247,0.28);
-      box-shadow:
-        0 14px 40px rgba(0,0,0,0.45),
-        0 0 0 1px rgba(34,211,238,0.10) inset;
-      backdrop-filter: blur(10px);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.45);
     }
 
-    .card h2{
-      margin:0 0 14px;
-      font-size: 26px;
-      letter-spacing: .2px;
-    }
+    .card h2{ margin:0 0 14px; font-size:26px; }
+    .card p{ margin:0; font-size:16px; line-height:1.3; }
 
-    .card p{
-      margin:0;
-      font-size: 16px;
-      line-height: 1.3;
-      color: rgba(240,240,255,0.88);
-    }
-
-    /* ===== 推薦區：更繽紛、更電競（但仍好讀） ===== */
-    .section.gray{
-      padding: calc(var(--section-pad-y) + 10px) 0;
-      /* 背景多一層霓虹斜線/光暈 */
-      background:
-        radial-gradient(700px 380px at 20% 20%, rgba(168,85,247,0.22), transparent 60%),
-        radial-gradient(700px 380px at 80% 40%, rgba(34,211,238,0.18), transparent 60%),
-        linear-gradient(135deg, rgba(124,58,237,0.10), rgba(34,211,238,0.08));
-      border-top: 1px solid rgba(255,255,255,0.06);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .card.alt{
-      border: 1px solid rgba(34,211,238,0.26);
-      box-shadow:
-        0 16px 48px rgba(0,0,0,0.50),
-        0 0 28px rgba(168,85,247,0.12);
-    }
-
-    .card ul{
-      margin:0;
-      padding-left: 18px;
-      color: rgba(240,240,255,0.90);
-      font-size: 16px;
-    }
-    .card li{ margin: 10px 0; }
-
-    /* ===== CTA：要炸，就炸在這（不動 Banner） ===== */
+    /* CTA */
     .cta{
-      padding: 110px 0;
+      padding:110px 0;
       text-align:center;
       background:
         radial-gradient(900px 420px at 50% 0%, rgba(168,85,247,0.28), transparent 60%),
         linear-gradient(135deg, rgba(124,58,237,0.55), rgba(34,211,238,0.22)),
         #0b0b12;
-      border-top: 1px solid rgba(255,255,255,0.06);
+      border-top:1px solid rgba(255,255,255,0.06);
     }
 
-    .cta h2{
-      margin:0 0 10px;
-      font-size: 36px;
-      letter-spacing: .3px;
-      color:#ffffff;
-    }
-
-    .cta p{
-      margin:0 0 24px;
-      line-height: 1.3;
-      font-size: 16px;
-      color: rgba(255,255,255,0.86);
-    }
+    .cta h2{ font-size:36px; margin:0 0 10px; }
+    .cta p{ font-size:16px; margin:0 0 20px; }
 
     .btn{
       display:inline-block;
-      padding: 18px 56px;
-      border-radius: 999px;
-      font-weight: 800;
-      font-size: 18px;
-      letter-spacing: .4px;
+      padding:18px 56px;
+      font-size:18px;
+      font-weight:800;
+      color:#fff;
+      border-radius:999px;
       text-decoration:none;
-      color:#ffffff;
-      background: linear-gradient(135deg, #a855f7 0%, #7c3aed 45%, #22d3ee 100%);
-      box-shadow:
-        0 14px 30px rgba(0,0,0,0.45),
-        0 0 0 2px rgba(255,255,255,0.14) inset,
-        0 0 26px rgba(34,211,238,0.20);
-      transition: transform .15s ease, filter .15s ease;
-    }
-    .btn:hover{
-      transform: translateY(-2px);
-      filter: brightness(1.06);
+      background: linear-gradient(135deg, #a855f7, #7c3aed, #22d3ee);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.45);
     }
 
-    /* ===== 手機：把留白縮一點，卡片更好塞 ===== */
-    @media (max-width: 768px){
-      :root{
-        --content-width: 980px;
-        --section-pad-y: 48px;
-        --section-pad-x: 16px;
-        --card-radius: 16px;
-      }
-      .card{ padding: 22px 18px; }
-      .card h2{ font-size: 22px; }
-      .cta{ padding: 70px 0; }
-      .cta h2{ font-size: 26px; }
+    /* Footer（已加入） */
+    .footer{
+      padding:36px 16px 42px;
+      text-align:center;
+      font-size:14px;
+      color:rgba(255,255,255,0.55);
+      background:#0b0b12;
+      border-top:1px solid rgba(255,255,255,0.06);
     }
+
+    .footer p{ margin:6px 0; }
+    .footer a{ color:rgba(168,85,247,0.9); text-decoration:none; }
   </style>
 </head>
 
 <body>
 
-  <!-- Banner（完全不動） -->
   <div class="banner">
     <div class="banner-card">
       <h1>好玩遊戲</h1>
@@ -202,7 +124,6 @@
     </div>
   </div>
 
-  <!-- 這裡是做什麼的（內容區：加大、變卡片） -->
   <div class="section">
     <div class="wrap">
       <div class="card">
@@ -215,14 +136,23 @@
     </div>
   </div>
 
-  <!-- CTA（電競感收尾） -->
   <div class="cta">
     <div class="wrap">
       <h2>想試試看？</h2>
       <p>點進來看看就知道了</p>
-      <p>官方Line: @gy188</p>
+      <p>官方 Line：@gy188</p>
       <a class="btn" href="https://www.raito188.com/Register?a=2370">立即遊玩</a>
     </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>好玩遊戲｜娛樂體驗平台</p>
+    <p>
+      官方 LINE：
+      <a href="https://lin.ee/XXXXXXX" target="_blank" rel="noopener">@gy188</a>
+    </p>
+    <p>© 2026 All Rights Reserved.</p>
   </div>
 
 </body>
