@@ -4,25 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>好玩遊戲</title>
-</head>
 
-<body style="margin:0; font-family: Arial, 'Noto Sans TC', sans-serif; line-height:1.6; color:#222;">
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, "Noto Sans TC", sans-serif;
+      line-height:1.6;
+      color:#222;
+    }
 
-  <!-- Banner -->
-  <div style="
-    width:100%;
-    height:220px;
-    background-color:#111;
-    background-image:url('Banner-07.jpg');
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-  ">
-    <div style="
+    /* Banner：桌機 */
+    .banner{
+      width:100%;
+      height:220px;
+      background:#111 url('Banner-07.jpg') center / cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+
+    .banner-card{
       color:#fff;
       background:rgba(0,0,0,0.40);
       padding:14px 16px;
@@ -31,14 +33,63 @@
       max-width:900px;
       width:calc(100% - 32px);
       box-sizing:border-box;
-    ">
-      <h1 style="margin:0 0 6px; font-size:34px;">好玩遊戲</h1>
-      <p style="margin:0; font-size:16px;">輕鬆玩、沒壓力，純粹就是好玩</p>
+    }
+
+    .banner-card h1{ margin:0 0 6px; font-size:34px; }
+    .banner-card p{ margin:0; font-size:16px; }
+
+    /* 手機：高度變短 + 重心往上，超扁圖才不會怪 */
+    @media (max-width: 768px){
+      .banner{
+        height:140px;
+        background-position:center top;
+      }
+      .banner-card h1{ font-size:26px; }
+      .banner-card p{ font-size:14px; }
+    }
+
+    .section{
+      padding:50px 20px;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .section.gray{
+      background:#f5f5f5;
+      max-width:none;
+      margin:0;
+    }
+    .section.gray .inner{
+      max-width:900px;
+      margin:auto;
+    }
+
+    .cta{
+      padding:70px 20px;
+      text-align:center;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 30px;
+      background:#000;
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="banner">
+    <div class="banner-card">
+      <h1>好玩遊戲</h1>
+      <p>輕鬆玩、沒壓力，純粹就是好玩</p>
     </div>
   </div>
 
-  <!-- 介紹 -->
-  <div style="padding:50px 20px; max-width:900px; margin:auto;">
+  <div class="section">
     <h2 style="margin:0 0 12px;">這裡是做什麼的？</h2>
     <p style="margin:0;">
       這是一個讓人放鬆的小天地，遊戲簡單、節奏剛好，
@@ -46,9 +97,8 @@
     </p>
   </div>
 
-  <!-- 特色 -->
-  <div style="padding:50px 20px; background:#f5f5f5;">
-    <div style="max-width:900px; margin:auto;">
+  <div class="section gray">
+    <div class="inner">
       <h2 style="margin:0 0 12px;">為什麼會想推薦？</h2>
       <ul style="margin:0; padding-left:18px;">
         <li>好上手，不用學</li>
@@ -58,18 +108,10 @@
     </div>
   </div>
 
-  <!-- 行動 -->
-  <div style="padding:70px 20px; text-align:center;">
+  <div class="cta">
     <h2 style="margin:0 0 10px;">想試試看？</h2>
     <p style="margin:0 0 18px;">點進來看看就知道了</p>
-    <a href="#" style="
-      display:inline-block;
-      padding:12px 30px;
-      background:#000;
-      color:#fff;
-      text-decoration:none;
-      border-radius:8px;
-    ">立即開始</a>
+    <a class="btn" href="#">立即開始</a>
   </div>
 
 </body>
