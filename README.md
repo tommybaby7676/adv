@@ -12,7 +12,7 @@
   padding:120px 20px;
   text-align:center;
   color:#fff;
-  background-image:url('hero.jpg');
+  background-image:url('Banner-07.jpg');
   background-size:cover;
   background-position:center;
 ">
