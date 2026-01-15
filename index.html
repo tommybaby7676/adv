@@ -3,40 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>我的第一個一頁式網站</title>
+  <title>好玩遊戲</title>
 </head>
 
 <body style="margin:0; font-family: Arial, 'Noto Sans TC', sans-serif; line-height:1.6; color:#222;">
 
   <!-- Banner -->
-<div class="banner">
-  <div class="banner-card">
-    <h1>好玩遊戲</h1>
-    <p>輕鬆玩、沒壓力，純粹就是好玩</p>
-  </div>
-</div>
-
-<style>
-  .banner{
+  <div style="
     width:100%;
-    height:220px;                 /* 桌機高度 */
-    background:#111 url('Banner-07.jpg') center / cover no-repeat;
+    height:220px;
+    background-color:#111;
+    background-image:url('Banner-07.jpg');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-  }
+  ">
+    <div style="
+      color:#fff;
+      background:rgba(0,0,0,0.40);
+      padding:14px 16px;
+      border-radius:12px;
+      margin:0 16px;
+      max-width:900px;
+      width:calc(100% - 32px);
+      box-sizing:border-box;
+    ">
+      <h1 style="margin:0 0 6px; font-size:34px;">好玩遊戲</h1>
+      <p style="margin:0; font-size:16px;">輕鬆玩、沒壓力，純粹就是好玩</p>
+    </div>
+  </div>
 
-  .banner-card{
-    color:#fff;
-    background:rgba(0,0,0,.40);
-    padding:14px 16px;
-    border-radius:12px;
-    margin:0 16px;
-    max-width:900px;
-    width:calc(100% - 32px);
-    box-sizing:border-box;
-
+  <!-- 介紹 -->
+  <div style="padding:50px 20px; max-width:900px; margin:auto;">
+    <h2 style="margin:0 0 12px;">這裡是做什麼的？</h2>
+    <p style="margin:0;">
+      這是一個讓人放鬆的小天地，遊戲簡單、節奏剛好，
+      不用研究、不用記規則，想玩就玩。
+    </p>
+  </div>
 
   <!-- 特色 -->
   <div style="padding:50px 20px; background:#f5f5f5;">
