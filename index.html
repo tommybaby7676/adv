@@ -2,37 +2,38 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>我的第一個一頁式網站</title>
 </head>
-<body>
-  <body style="font-family: Arial, 'Noto Sans TC', sans-serif; margin:0;">
 
-  <!-- 首屏 -->
+<body style="margin:0; font-family: Arial, 'Noto Sans TC', sans-serif; line-height:1.6; color:#222;">
+
+  <!-- Banner（你的圖是 2001x367，請把它當橫幅，不要當滿版首屏） -->
   <div style="
-  min-height: 70vh;
-  padding: 40px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  background-image: url('Banner-07.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-">
-  <div>
-    <h1 style="font-size:48px; margin-bottom:16px;">好玩遊戲</h1>
-    <p style="font-size:18px;">
-      輕鬆玩、沒壓力，純粹就是好玩
-    </p>
+    width:100%;
+    height:220px;
+    background:#111 url('Banner-07.jpg') center / contain no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  ">
+    <div style="
+      color:#fff;
+      background:rgba(0,0,0,0.45);
+      padding:18px 18px;
+      border-radius:12px;
+      margin:0 16px;
+    ">
+      <h1 style="margin:0 0 8px; font-size:34px;">好玩遊戲</h1>
+      <p style="margin:0; font-size:16px;">輕鬆玩、沒壓力，純粹就是好玩</p>
+    </div>
   </div>
-</div>
 
   <!-- 介紹 -->
   <div style="padding:60px 20px; max-width:900px; margin:auto;">
-    <h2>這裡是做什麼的？</h2>
-    <p>
+    <h2 style="margin:0 0 12px;">這裡是做什麼的？</h2>
+    <p style="margin:0;">
       這是一個讓人放鬆的小天地，遊戲簡單、節奏剛好，
       不用研究、不用記規則，想玩就玩。
     </p>
@@ -41,8 +42,8 @@
   <!-- 特色 -->
   <div style="padding:60px 20px; background:#f5f5f5;">
     <div style="max-width:900px; margin:auto;">
-      <h2>為什麼會想推薦？</h2>
-      <ul>
+      <h2 style="margin:0 0 12px;">為什麼會想推薦？</h2>
+      <ul style="margin:0; padding-left:18px;">
         <li>好上手，不用學</li>
         <li>畫面舒服，不累眼</li>
         <li>想玩就玩，想停就停</li>
@@ -52,21 +53,17 @@
 
   <!-- 行動 -->
   <div style="padding:80px 20px; text-align:center;">
-    <h2>想試試看？</h2>
-    <p>點進來看看就知道了</p>
+    <h2 style="margin:0 0 10px;">想試試看？</h2>
+    <p style="margin:0 0 18px;">點進來看看就知道了</p>
     <a href="#" style="
       display:inline-block;
-      margin-top:20px;
       padding:12px 30px;
       background:#000;
       color:#fff;
       text-decoration:none;
-      border-radius:4px;">
-      立即開始
-    </a>
+      border-radius:6px;
+    ">立即開始</a>
   </div>
-
-</body>
 
 </body>
 </html>
