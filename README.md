@@ -8,10 +8,20 @@
   <body style="font-family: Arial, 'Noto Sans TC', sans-serif; margin:0;">
 
   <!-- 首屏 -->
-  <div style="padding:80px 20px; text-align:center; background:#111; color:#fff;">
-    <h1>好玩遊戲</h1>
-    <p>輕鬆玩、沒壓力，純粹就是好玩</p>
-  </div>
+  <div style="
+  padding:120px 20px;
+  text-align:center;
+  color:#fff;
+  background-image:url('hero.jpg');
+  background-size:cover;
+  background-position:center;
+">
+  <h1 style="font-size:48px; margin-bottom:20px;">好玩遊戲</h1>
+  <p style="font-size:18px;">
+    輕鬆玩、沒壓力，純粹就是好玩
+  </p>
+</div>
+
 
   <!-- 介紹 -->
   <div style="padding:60px 20px; max-width:900px; margin:auto;">
